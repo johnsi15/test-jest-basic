@@ -21,3 +21,6 @@ Assertions o afirmaciones, con los cuales se puede verificar el comportamiento d
 - toBeFalsy: comprueba si un valor es falso. Por ejemplo: `expect("").toBeFalsy()`.
 
 - toThrow: comprueba si una función lanza una excepción. Por ejemplo: `expect(() => { throw new Error(); }).toThrow()`.
+
+## Install types for VScode
+`npm i -D @types/jest`
