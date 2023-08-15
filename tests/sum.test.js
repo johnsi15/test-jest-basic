@@ -40,7 +40,9 @@ describe('testing data JS', () => {
 
   test('should null or undefined', () => {
     expect(null).toBeNull()
+    expect(undefined).toBeDefined() // the value is defined
     expect(undefined).toBeUndefined()
+    expect(null).not.toBeUndefined() // not is undefined
   })
 
   test('should be string', () => {
