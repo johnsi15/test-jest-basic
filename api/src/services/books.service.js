@@ -13,6 +13,10 @@ class BooksService {
   createBook(newBook) {
     return this.mongoDB.create(this.collection, newBook);
   }
+
+  close() {
+    return this.mongoDB.close();
+  }
 }
 
 module.exports = BooksService;

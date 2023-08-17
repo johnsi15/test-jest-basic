@@ -19,7 +19,7 @@ class MongoLib {
       MongoLib.connection = this.client.db(this.dbName);
       return MongoLib.connection;
     }
-    return MongoLib.connection;
+    return MongoLib.connection; // Atributo de clase o variable de clase
   }
 
   async getAll(collection, query) {
@@ -49,6 +49,10 @@ class MongoLib {
   async delete(collection, id) {
     const db = await this.connect();
     return db.collection(collection).deleteOne({ _id: ObjectId(id) });
+  }
+
+  async close() {
+    this.client.close();
   }
 }
 
